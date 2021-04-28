@@ -152,7 +152,6 @@ void initTeapot() {
 	glBindBuffer(GL_ARRAY_BUFFER, VBOs[TEAPOT]);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vec3) * teapotVertices.size(), &teapotVertices[0], GL_STATIC_DRAW);
 	glEnableVertexAttribArray(0); // This allows usage of layout location 0 in the vertex shader
-	// layout location 0, vertex array so each element of array has x, y, z coordinate, GL_FALSE whether data normalized, size of data, last 0: how much offset in the buffer
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), 0);
 
 	// Bind normals to layout location 1
